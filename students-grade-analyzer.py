@@ -1,22 +1,19 @@
+#1- Prints students names and grades
 def display_student_summary(students, grades):
-    print("\nthe students in this class are ")
+    print("\nthe students in this class are")
     for i in range(len(students)):
         student = students[i]
         grade = grades[i]
         print(f"Name: {student}, Grade: {grade}")
-
-
-
-
+#2- Prints the average grade of the class
 def get_avg_grade(grades):
     if len(grades) == 0:
         return 0
     return sum(grades) / len(grades)
-
+#3- Prints the highest grade earned (Student name and grade)
 def get_highest_grade(students, grades):
     if not grades:
         return []
-
     max_grade = max(grades)
     top_students = [
         (students[i], grades[i])
@@ -27,7 +24,7 @@ def get_highest_grade(students, grades):
     # fi possibilite ykoun plusieurs students have the same higher grade
     return top_students
 
-
+#4- Prints the count of students who passed (grade >= 60)
 def count_passed(grades):
     count = 0
     for grade in grades:
@@ -37,6 +34,7 @@ def count_passed(grades):
 
 
 def main():
+    #the number of students should be decided by the user
     num_students = int(input("how many student in the class: "))
     students = []
     grades = []
@@ -73,5 +71,4 @@ def main():
     passed_count = count_passed(grades)
     print(f"the count of students who passed (grade >= 60): {passed_count}")
 
-if __name__ == "__main__":
-    main()
+main()
