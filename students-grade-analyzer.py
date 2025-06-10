@@ -20,7 +20,6 @@ def get_highest_grade(students, grades):
         for i in range(len(grades))
         if grades[i] == max_grade
     ]
-
     # fi possibilite ykoun plusieurs students have the same higher grade
     return top_students
 
@@ -55,11 +54,10 @@ def main():
         students.append(name)
         grades.append(grade)
 
-    display_student_summary(students, grades)
-    
+    display_student_summary(students, grades) 
     avg_grade = get_avg_grade(grades)
+    
     print(f"\nthe average grade of the class: {avg_grade:.2f}")
-
     top_students = get_highest_grade(students, grades)
     if top_students:
         print("the highest grade earned by:")
