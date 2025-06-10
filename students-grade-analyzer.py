@@ -42,6 +42,7 @@ def main():
         name = input("student's name: ")
         while True:
             try:
+                #the grades should be (out of 100)
                 grade = float(input(f" {name} grade (/100): "))
                 if 0 <= grade <= 100:
                     break
